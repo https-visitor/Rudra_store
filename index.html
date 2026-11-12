@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apex Store | Premium E-Commerce</title>
+    <title>RUDRA STORE — E-Commerce</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,13 +49,11 @@
             flex-direction: column;
         }
 
-        /* Scrollbar Styling */
         ::-webkit-scrollbar { width: 6px; height: 6px; }
         ::-webkit-scrollbar-track { background: var(--bg-main); }
         ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 99px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--accent-purple); }
 
-        /* Typography & Utilities */
         .gradient-text {
             background: var(--primary-gradient);
             -webkit-background-clip: text;
@@ -96,7 +94,6 @@
             border-color: rgba(255, 255, 255, 0.2);
         }
 
-        /* Top Announcement Banner */
         #topBanner {
             background: linear-gradient(90deg, #7e22ce, #db2777);
             color: white;
@@ -107,7 +104,6 @@
             letter-spacing: 0.3px;
         }
 
-        /* Header Navigation */
         header {
             position: sticky;
             top: 0;
@@ -204,7 +200,6 @@
             padding: 0 4px;
         }
 
-        /* Category Filter Tabs */
         .category-wrapper {
             max-width: 1300px;
             margin: 16px auto 0;
@@ -233,7 +228,6 @@
             border-color: transparent;
         }
 
-        /* Main Container */
         .main-container {
             max-width: 1300px;
             width: 100%;
@@ -242,17 +236,16 @@
             flex: 1;
         }
 
-        /* Product Grid */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
+            gap: 10px;
         }
         @media (min-width: 768px) {
-            .product-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+            .product-grid { grid-template-columns: repeat(4, 1fr); gap: 14px; }
         }
         @media (min-width: 1024px) {
-            .product-grid { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+            .product-grid { grid-template-columns: repeat(5, 1fr); gap: 16px; }
         }
 
         .product-card {
@@ -274,7 +267,7 @@
         .product-img-wrap {
             position: relative;
             width: 100%;
-            padding-top: 100%;
+            padding-top: 72%;
             background: #111827;
             cursor: pointer;
             overflow: hidden;
@@ -304,28 +297,28 @@
             backdrop-filter: blur(4px);
         }
         .product-info {
-            padding: 14px;
+            padding: 10px;
             display: flex;
             flex-direction: column;
             flex: 1;
         }
         .product-category {
-            font-size: 0.72rem;
+            font-size: 0.65rem;
             color: var(--accent-purple);
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
         .product-title {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
             display: -webkit-box;
-            -webkit-line-clamp: 2;
+            -webkit-line-clamp: 1;
             -webkit-box-orient: vertical;
             overflow: hidden;
-            height: 2.5rem;
+            height: 1.25rem;
             cursor: pointer;
         }
         .product-title:hover {
@@ -334,11 +327,11 @@
         .price-row {
             display: flex;
             align-items: baseline;
-            gap: 8px;
-            margin-bottom: 12px;
+            gap: 6px;
+            margin-bottom: 6px;
         }
         .price-current {
-            font-size: 1.15rem;
+            font-size: 1rem;
             font-weight: 800;
             color: var(--text-primary);
         }
@@ -357,13 +350,6 @@
         }
         .stock-tag.in { color: var(--accent-green); }
         .stock-tag.out { color: var(--accent-red); }
-        .btn-add-cart {
-            margin-top: auto;
-            width: 100%;
-            padding: 10px;
-            font-size: 0.85rem;
-            border-radius: 10px;
-        }
 
         /* Slide-Over Shopping Cart */
         .cart-overlay {
@@ -694,56 +680,9 @@
         .support-gmail { background: #ea4335; }
         .support-link-btn:hover { transform: scale(1.1); }
 
-        /* Admin Dashboard View */
-        #adminView {
-            display: none;
-            padding: 24px 0 60px;
-        }
-        .admin-nav {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 24px;
-            overflow-x: auto;
-            border-bottom: 1px solid var(--border-glass);
-            padding-bottom: 12px;
-        }
-        .admin-tab {
-            padding: 8px 16px;
-            background: transparent;
-            border: none;
-            color: var(--text-secondary);
-            font-weight: 600;
-            cursor: pointer;
-            border-radius: 8px;
-            white-space: nowrap;
-        }
-        .admin-tab.active {
-            background: rgba(255, 255, 255, 0.08);
-            color: var(--accent-purple);
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 14px;
-            margin-bottom: 24px;
-        }
-        @media(min-width: 768px) {
-            .stats-grid { grid-template-columns: repeat(4, 1fr); }
-        }
-        .stat-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-glass);
-            padding: 16px;
-            border-radius: var(--radius-md);
-        }
-        .stat-value {
-            font-size: 1.5rem;
-            font-weight: 800;
-            margin-top: 6px;
-        }
-
-        /* Responsive utilities */
+        .mobile-search-btn { display: none; }
         @media (max-width: 640px) {
+            .mobile-search-btn { display: flex; }
             .search-box { display: none; }
             .search-box.mobile-open {
                 display: block;
@@ -751,9 +690,15 @@
                 top: 100%;
                 left: 0;
                 right: 0;
+                max-width: 100%;
                 background: #0f172a;
-                padding: 10px 20px;
-                box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+                padding: 12px 20px;
+                border-bottom: 1px solid var(--border-glass);
+                box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+                z-index: 99;
+            }
+            .search-box.mobile-open i {
+                left: 34px;
             }
         }
     </style>
@@ -766,9 +711,9 @@
     <!-- Header Navigation -->
     <header>
         <div class="nav-container">
-            <div class="logo" onclick="app.showStore()">
+            <div class="logo" onclick="app.resetFilters()">
                 <i class="fa-solid fa-bolt gradient-text"></i>
-                <span id="storeLogoName" class="gradient-text">APEX STORE</span>
+                <span id="storeLogoName" class="gradient-text">RUDRA STORE</span>
             </div>
 
             <div class="search-box" id="mainSearchBox">
@@ -777,15 +722,15 @@
             </div>
 
             <div class="header-actions">
+                <button class="icon-btn mobile-search-btn" onclick="app.toggleMobileSearch()" title="Search Products">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
                 <button class="icon-btn" onclick="app.toggleProfileModal()" title="My Profile / Orders">
                     <i class="fa-regular fa-user"></i>
                 </button>
                 <button class="icon-btn" onclick="app.toggleCart(true)" title="Cart">
                     <i class="fa-solid fa-bag-shopping"></i>
                     <span class="badge-count" id="cartCount">0</span>
-                </button>
-                <button class="icon-btn" onclick="app.requestAdminAccess()" title="Admin Control Panel">
-                    <i class="fa-solid fa-shield-halved"></i>
                 </button>
             </div>
         </div>
@@ -799,96 +744,10 @@
         </div>
     </header>
 
-    <!-- Main Content Area -->
+    <!-- Main Store Front View -->
     <main class="main-container">
-        <!-- Store Front View -->
-        <div id="storeView">
-            <div class="product-grid" id="productGrid">
-                <!-- Products injected dynamically -->
-            </div>
-        </div>
-
-        <!-- Admin Dashboard Panel -->
-        <div id="adminView">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px;">
-                <h2 style="font-size: 1.5rem; font-weight:800;">Admin <span class="gradient-text">Control Panel</span></h2>
-                <button class="btn-glass" style="padding: 6px 14px; font-size:0.85rem;" onclick="app.exitAdmin()">Exit Admin</button>
-            </div>
-
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div style="font-size:0.8rem; color:var(--text-muted);">Total Revenue</div>
-                    <div class="stat-value gradient-text" id="adminRevenue">₹0</div>
-                </div>
-                <div class="stat-card">
-                    <div style="font-size:0.8rem; color:var(--text-muted);">Total Orders</div>
-                    <div class="stat-value" id="adminTotalOrders">0</div>
-                </div>
-                <div class="stat-card">
-                    <div style="font-size:0.8rem; color:var(--text-muted);">Pending Action</div>
-                    <div class="stat-value" style="color:var(--accent-gold);" id="adminPendingOrders">0</div>
-                </div>
-                <div class="stat-card">
-                    <div style="font-size:0.8rem; color:var(--text-muted);">Active Products</div>
-                    <div class="stat-value" style="color:var(--accent-purple);" id="adminActiveProducts">0</div>
-                </div>
-            </div>
-
-            <div class="admin-nav">
-                <button class="admin-tab active" onclick="app.switchAdminTab('products')">Products</button>
-                <button class="admin-tab" onclick="app.switchAdminTab('orders')">Orders</button>
-                <button class="admin-tab" onclick="app.switchAdminTab('reviews')">Reviews & Moderation</button>
-                <button class="admin-tab" onclick="app.switchAdminTab('supportSettings')">Store & Support Settings</button>
-            </div>
-
-            <!-- Tab: Product Management -->
-            <div id="adminTabProducts">
-                <div style="display:flex; justify-content:flex-end; margin-bottom:14px;">
-                    <button class="btn-gradient" style="padding:8px 16px; font-size:0.85rem;" onclick="app.openProductModal()">
-                        <i class="fa-solid fa-plus"></i> Add Product
-                    </button>
-                </div>
-                <div id="adminProductList" style="display:flex; flex-direction:column; gap:10px;"></div>
-            </div>
-
-            <!-- Tab: Orders Management -->
-            <div id="adminTabOrders" style="display:none;">
-                <div id="adminOrderList" style="display:flex; flex-direction:column; gap:14px;"></div>
-            </div>
-
-            <!-- Tab: Reviews & Moderation -->
-            <div id="adminTabReviews" style="display:none;">
-                <h4 style="margin-bottom:12px;">Customer Product Reviews</h4>
-                <div id="adminReviewList" style="display:flex; flex-direction:column; gap:10px;"></div>
-            </div>
-
-            <!-- Tab: Settings & Support links -->
-            <div id="adminTabSupportSettings" style="display:none;">
-                <div style="max-width:550px; background:var(--bg-card); padding:20px; border-radius:var(--radius-lg); border:1px solid var(--border-glass);">
-                    <h3 style="margin-bottom:16px;">Support Channels & Details</h3>
-                    <div class="form-group">
-                        <label>Store Display Name</label>
-                        <input type="text" id="settingStoreName" class="form-control" placeholder="Store Name">
-                    </div>
-                    <div class="form-group">
-                        <label>Top Banner Text</label>
-                        <input type="text" id="settingBannerText" class="form-control" placeholder="Banner text">
-                    </div>
-                    <div class="form-group">
-                        <label>WhatsApp Number (With country code)</label>
-                        <input type="text" id="settingWhatsapp" class="form-control" placeholder="919876543210">
-                    </div>
-                    <div class="form-group">
-                        <label>Support Gmail</label>
-                        <input type="email" id="settingGmail" class="form-control" placeholder="support@yourdomain.com">
-                    </div>
-                    <div class="form-group">
-                        <label>Telegram Username / Link</label>
-                        <input type="text" id="settingTelegram" class="form-control" placeholder="apex_support">
-                    </div>
-                    <button class="btn-gradient" style="width:100%; padding:10px; margin-top:8px;" onclick="app.saveStoreSettings()">Save Settings</button>
-                </div>
-            </div>
+        <div class="product-grid" id="productGrid">
+            <!-- Products injected dynamically -->
         </div>
     </main>
 
@@ -903,9 +762,7 @@
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
-            <div class="cart-items-container" id="cartItemList">
-                <!-- Injected via JavaScript -->
-            </div>
+            <div class="cart-items-container" id="cartItemList"></div>
             <div class="cart-footer">
                 <div class="cart-subtotal">
                     <span style="color:var(--text-secondary);">Subtotal:</span>
@@ -922,9 +779,7 @@
     <div class="modal" id="productDetailModal">
         <div class="modal-content" style="max-width: 650px;">
             <button class="modal-close" onclick="app.closeModal('productDetailModal')"><i class="fa-solid fa-xmark"></i></button>
-            <div id="productDetailContent">
-                <!-- Loaded dynamically -->
-            </div>
+            <div id="productDetailContent"></div>
         </div>
     </div>
 
@@ -1020,53 +875,36 @@
         </div>
     </div>
 
-    <!-- Product Add/Edit Modal (Admin) -->
-    <div class="modal" id="adminProductModal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="app.closeModal('adminProductModal')"><i class="fa-solid fa-xmark"></i></button>
-            <h3 style="margin-bottom:14px;" id="adminProductModalTitle">Add Product</h3>
-            <input type="hidden" id="admProdId">
-            <div class="form-group">
-                <label>Product Name *</label>
-                <input type="text" id="admProdName" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label>Category *</label>
-                <input type="text" id="admProdCategory" class="form-control" placeholder="e.g. Electronics, Fashion, Deals" required>
-            </div>
-            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
-                <div class="form-group">
-                    <label>Selling Price (₹) *</label>
-                    <input type="number" id="admProdPrice" class="form-control" required>
+    <!-- Live Support Chat Modal -->
+    <div class="modal" id="liveChatModal">
+        <div class="modal-content" style="max-width: 440px; padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 520px;">
+            <div style="padding: 14px 18px; background: rgba(168,85,247,0.12); border-bottom: 1px solid var(--border-glass); display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--primary-gradient); display: flex; align-items: center; justify-content: center; font-size: 1rem;">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 0.95rem; font-weight: 800;">Live Admin Support</h4>
+                        <span style="font-size: 0.7rem; color: var(--accent-green); font-weight: 600;">● Direct Real-Time Chat</span>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>Original Price (₹)</label>
-                    <input type="number" id="admProdOrigPrice" class="form-control">
-                </div>
+                <button onclick="app.closeModal('liveChatModal')" style="background: none; border: none; color: var(--text-muted); font-size: 1.2rem; cursor: pointer;">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
             </div>
-            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
-                <div class="form-group">
-                    <label>Stock Count</label>
-                    <input type="number" id="admProdStock" class="form-control" value="10">
-                </div>
-                <div class="form-group">
-                    <label>Tier Discount Qty (Bonus %)</label>
-                    <input type="number" id="admProdBonusQty" class="form-control" placeholder="e.g. Buy 2 get 5% off" value="2">
+
+            <div id="userChatMessages" style="flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 10px; background: rgba(11, 15, 25, 0.6);">
+                <div style="text-align: center; color: var(--text-muted); font-size: 0.8rem; margin: auto;">
+                    Send a message to start chatting directly with Admin!
                 </div>
             </div>
-            <div class="form-group">
-                <label>Main Image URL *</label>
-                <input type="url" id="admProdImage" class="form-control" placeholder="https://images.unsplash.com/..." required>
-            </div>
-            <div class="form-group">
-                <label>Additional Gallery Images (Comma-separated URLs)</label>
-                <textarea id="admProdGallery" class="form-control" placeholder="URL1, URL2, URL3"></textarea>
-            </div>
-            <div class="form-group">
-                <label>Description</label>
-                <textarea id="admProdDesc" class="form-control" placeholder="Enter product details"></textarea>
-            </div>
-            <button class="btn-gradient" style="width:100%; padding:10px;" onclick="app.saveAdminProduct()">Save to Catalog</button>
+
+            <form onsubmit="event.preventDefault(); app.sendUserChatMessage();" style="padding: 12px; border-top: 1px solid var(--border-glass); background: #0f172a; display: flex; gap: 8px;">
+                <input type="text" id="userChatInput" class="form-control" placeholder="Type your message here..." style="border-radius: 99px; padding: 9px 16px;" autocomplete="off" required>
+                <button type="submit" class="btn-gradient" style="width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
         </div>
     </div>
 
@@ -1076,6 +914,9 @@
             <i class="fa-solid fa-headset" style="font-size:1.3rem;"></i>
         </button>
         <div class="support-menu" id="supportMenu">
+            <button type="button" onclick="app.openLiveChatModal()" class="support-link-btn" style="background: var(--primary-gradient); border:none; cursor:pointer;" title="Live Chat with Admin">
+                <i class="fa-solid fa-comments"></i>
+            </button>
             <a href="#" id="supportWhatsAppBtn" target="_blank" class="support-link-btn support-whatsapp" title="WhatsApp Chat">
                 <i class="fa-brands fa-whatsapp"></i>
             </a>
@@ -1094,10 +935,9 @@
     <!-- Firebase v10 Modular SDK -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-        import { getDatabase, ref, set, get, update, remove, onValue, push } 
+        import { getDatabase, ref, set, update, onValue, push } 
                from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js";
 
-        // Provided Firebase Configuration
         const firebaseConfig = {
             apiKey: "AIzaSyDeJeap763kAEYjjCXaTP4EEDfvmE29hEw",
             authDomain: "saurabhadmin-fd6cb.firebaseapp.com",
@@ -1111,14 +951,14 @@
         const fbApp = initializeApp(firebaseConfig);
         const db = getDatabase(fbApp);
 
-        // Core Application State
         window.state = {
             products: {},
             orders: {},
             reviews: {},
             blockedUsers: {},
+            chatMessages: {},
             settings: {
-                storeName: "APEX STORE",
+                storeName: "RUDRA STORE",
                 bannerText: "🚀 Special Launch Sale: Use code APEXNEW for free express shipping!",
                 currency: "₹",
                 whatsapp: "919876543210",
@@ -1128,53 +968,34 @@
             cart: JSON.parse(localStorage.getItem('apex_cart') || '[]'),
             activeCategory: 'All',
             searchQuery: '',
-            adminPin: '1234',
-            isAdmin: false,
             selectedRating: 5
         };
 
-        // Application Controller
         const app = {
             init() {
                 this.setupRealtimeListeners();
                 this.loadLocalProfile();
                 this.renderCart();
-                this.checkUrlHash();
-                window.addEventListener('hashchange', () => this.checkUrlHash());
             },
 
-            checkUrlHash() {
-                if (window.location.hash === '#admin') {
-                    this.requestAdminAccess();
-                } else if (state.isAdmin && window.location.hash !== '#admin') {
-                    this.exitAdmin();
-                }
-            },
-
-            // Firebase Real-time listeners
             setupRealtimeListeners() {
-                // Products
                 onValue(ref(db, 'products'), (snapshot) => {
                     const data = snapshot.val();
                     if (!data) {
                         this.seedInitialProducts();
                     } else {
                         state.products = data;
+                        this.renderCategories();
                         this.renderProducts();
-                        if (state.isAdmin) this.renderAdminProducts();
-                        this.updateStats();
+                        this.renderCart();
                     }
                 });
 
-                // Orders
                 onValue(ref(db, 'orders'), (snapshot) => {
                     state.orders = snapshot.val() || {};
-                    this.updateStats();
                     this.renderUserOrderHistory();
-                    if (state.isAdmin) this.renderAdminOrders();
                 });
 
-                // Settings
                 onValue(ref(db, 'settings'), (snapshot) => {
                     const data = snapshot.val();
                     if (data) {
@@ -1183,15 +1004,24 @@
                     }
                 });
 
-                // Reviews
                 onValue(ref(db, 'reviews'), (snapshot) => {
                     state.reviews = snapshot.val() || {};
-                    if (state.isAdmin) this.renderAdminReviews();
+                    this.renderProducts();
                 });
 
-                // Blocked Users
                 onValue(ref(db, 'blockedUsers'), (snapshot) => {
                     state.blockedUsers = snapshot.val() || {};
+                });
+
+                const chatId = this.getUserChatId();
+                onValue(ref(db, `supportChats/${chatId}/messages`), (snapshot) => {
+                    state.chatMessages = snapshot.val() || {};
+                    this.renderUserChatMessages();
+                });
+
+                // Live Admin Find & Replace Code Patches Listener
+                onValue(ref(db, 'liveCodePatches'), (snapshot) => {
+                    this.applyLiveCodePatches(snapshot.val() || {});
                 });
             },
 
@@ -1205,13 +1035,11 @@
                         originalPrice: 4999,
                         category: "Electronics",
                         stock: 25,
-                        bonusQty: 2,
                         imageUrl: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&auto=format&fit=crop&q=80",
                         gallery: [
                             "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&auto=format&fit=crop&q=80",
                             "https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?w=600&auto=format&fit=crop&q=80"
-                        ],
-                        salesHistory: { day: 12, week: 48, month: 180, halfYear: 820, year: 1540 }
+                        ]
                     },
                     prod_2: {
                         id: "prod_2",
@@ -1221,10 +1049,8 @@
                         originalPrice: 6999,
                         category: "Electronics",
                         stock: 14,
-                        bonusQty: 2,
                         imageUrl: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&auto=format&fit=crop&q=80",
-                        gallery: [],
-                        salesHistory: { day: 8, week: 32, month: 110, halfYear: 450, year: 980 }
+                        gallery: []
                     },
                     prod_3: {
                         id: "prod_3",
@@ -1234,10 +1060,8 @@
                         originalPrice: 5499,
                         category: "Electronics",
                         stock: 18,
-                        bonusQty: 2,
                         imageUrl: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",
-                        gallery: [],
-                        salesHistory: { day: 20, week: 75, month: 240, halfYear: 910, year: 1950 }
+                        gallery: []
                     },
                     prod_4: {
                         id: "prod_4",
@@ -1247,10 +1071,8 @@
                         originalPrice: 3499,
                         category: "Fashion",
                         stock: 30,
-                        bonusQty: 3,
                         imageUrl: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600&auto=format&fit=crop&q=80",
-                        gallery: [],
-                        salesHistory: { day: 15, week: 62, month: 190, halfYear: 600, year: 1200 }
+                        gallery: []
                     }
                 };
                 set(ref(db, 'products'), initial);
@@ -1260,31 +1082,36 @@
                 const s = state.settings;
                 document.getElementById('topBanner').innerText = s.bannerText;
                 document.getElementById('storeLogoName').innerText = s.storeName;
+                document.title = `${s.storeName} — E-Commerce`;
 
-                // Support URLs
                 const cleanPhone = (s.whatsapp || '').replace(/[^0-9]/g, '');
                 document.getElementById('supportWhatsAppBtn').href = `https://wa.me/${cleanPhone}`;
                 document.getElementById('supportTelegramBtn').href = s.telegram.startsWith('http') ? s.telegram : `https://t.me/${s.telegram}`;
                 document.getElementById('supportGmailBtn').href = `mailto:${s.gmail}`;
             },
 
-            // Render Products Grid
+            resetFilters() {
+                state.activeCategory = 'All';
+                state.searchQuery = '';
+                document.getElementById('searchInput').value = '';
+                this.renderCategories();
+                this.renderProducts();
+            },
+
             renderProducts() {
                 const grid = document.getElementById('productGrid');
                 grid.innerHTML = '';
 
                 let prods = Object.values(state.products);
 
-                // Category filter
                 if (state.activeCategory !== 'All') {
                     if (state.activeCategory === 'Deals') {
-                        prods = prods.filter(p => p.originalPrice && ((p.originalPrice - p.price)/p.originalPrice >= 0.3));
+                        prods = prods.filter(p => p.originalPrice && ((p.originalPrice - p.price) / p.originalPrice >= 0.3));
                     } else {
-                        prods = prods.filter(p => p.category.toLowerCase() === state.activeCategory.toLowerCase());
+                        prods = prods.filter(p => p.category && p.category.toLowerCase() === state.activeCategory.toLowerCase());
                     }
                 }
 
-                // Search query
                 if (state.searchQuery.trim()) {
                     const q = state.searchQuery.toLowerCase();
                     prods = prods.filter(p => 
@@ -1307,6 +1134,10 @@
                         : null;
 
                     const inStock = prod.stock > 0;
+                    const prodReviews = Object.values(state.reviews || {}).filter(r => r.productId === prod.id);
+                    const avgRating = prodReviews.length 
+                        ? (prodReviews.reduce((acc, c) => acc + Number(c.rating), 0) / prodReviews.length).toFixed(1) 
+                        : "4.8";
 
                     const card = document.createElement('div');
                     card.className = 'product-card';
@@ -1314,6 +1145,9 @@
                         <div class="product-img-wrap" onclick="app.showProductDetails('${prod.id}')">
                             <img src="${prod.imageUrl || 'https://via.placeholder.com/400'}" alt="${prod.name}" loading="lazy">
                             ${discount ? `<span class="badge-discount">${discount}% OFF</span>` : ''}
+                            <span style="position:absolute; bottom:8px; right:8px; background:rgba(11,15,25,0.85); border:1px solid rgba(245,158,11,0.4); color:#f59e0b; font-size:0.72rem; font-weight:700; padding:3px 8px; border-radius:99px; backdrop-filter:blur(4px); display:flex; align-items:center; gap:4px;">
+                                <i class="fa-solid fa-star"></i> ${avgRating} <span style="color:#94a3b8; font-weight:500;">(${prodReviews.length})</span>
+                            </span>
                         </div>
                         <div class="product-info">
                             <div class="product-category">${prod.category}</div>
@@ -1322,16 +1156,54 @@
                                 <span class="price-current">₹${prod.price.toLocaleString()}</span>
                                 ${prod.originalPrice ? `<span class="price-original">₹${prod.originalPrice.toLocaleString()}</span>` : ''}
                             </div>
-                            <div class="stock-tag ${inStock ? 'in' : 'out'}">
-                                <i class="fa-solid fa-circle" style="font-size: 6px;"></i> ${inStock ? `In Stock (${prod.stock})` : 'Out of Stock'}
+                            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; gap:6px;">
+                                <div class="stock-tag ${inStock ? 'in' : 'out'}" style="margin-bottom:0;">
+                                    <i class="fa-solid fa-circle" style="font-size: 6px;"></i> ${inStock ? `In Stock (${prod.stock})` : 'Out of Stock'}
+                                </div>
+                                ${inStock ? `
+                                <div style="display:flex; align-items:center; gap:6px; background:rgba(255,255,255,0.06); border:1px solid var(--border-glass); padding:2px 6px; border-radius:8px;">
+                                    <button type="button" class="qty-btn" style="width:20px; height:20px;" onclick="app.changeCardQty('${prod.id}', -1)">-</button>
+                                    <span id="card-qty-${prod.id}" style="font-size:0.8rem; font-weight:700; min-width:14px; text-align:center;">1</span>
+                                    <button type="button" class="qty-btn" style="width:20px; height:20px;" onclick="app.changeCardQty('${prod.id}', 1)">+</button>
+                                </div>
+                                ` : ''}
                             </div>
-                            <button class="btn-gradient btn-add-cart" ${!inStock ? 'disabled style="opacity:0.5; cursor:not-allowed;"' : ''} onclick="app.addToCart('${prod.id}')">
-                                <i class="fa-solid fa-cart-plus"></i> Add To Bag
-                            </button>
+
+                            <div style="display:flex; gap:6px; margin-top:auto;">
+                                <button class="btn-glass" style="flex:1; padding:9px 6px; font-size:0.78rem; font-weight:600; ${!inStock ? 'opacity:0.5; cursor:not-allowed;' : ''}" ${!inStock ? 'disabled' : ''} onclick="app.addCardQtyToCart('${prod.id}')">
+                                    <i class="fa-solid fa-cart-plus"></i> Add
+                                </button>
+                                <button class="btn-gradient" style="flex:1.2; padding:9px 6px; font-size:0.78rem; border-radius:10px; ${!inStock ? 'opacity:0.5; cursor:not-allowed;' : ''}" ${!inStock ? 'disabled' : ''} onclick="app.buyNowCard('${prod.id}')">
+                                    <i class="fa-solid fa-bolt"></i> Buy Now
+                                </button>
+                            </div>
                         </div>
                     `;
                     grid.appendChild(card);
                 });
+            },
+
+            renderCategories() {
+                const container = document.getElementById('categoryContainer');
+                if (!container) return;
+
+                const dynamicCats = new Set(['All']);
+                Object.values(state.products || {}).forEach(prod => {
+                    if (prod.category && prod.category.trim()) {
+                        dynamicCats.add(prod.category.trim());
+                    }
+                });
+                dynamicCats.add('Deals');
+
+                if (!dynamicCats.has(state.activeCategory)) {
+                    state.activeCategory = 'All';
+                }
+
+                container.innerHTML = Array.from(dynamicCats).map(cat => `
+                    <button class="cat-chip ${state.activeCategory === cat ? 'active' : ''}" onclick="app.filterCategory('${cat.replace(/'/g, "\\'")}')">
+                        ${cat}
+                    </button>
+                `).join('');
             },
 
             filterCategory(cat) {
@@ -1347,30 +1219,106 @@
                 this.renderProducts();
             },
 
-            // Product Details Modal with Multiple Images, Sales analytics & Reviews
+            toggleMobileSearch() {
+                const box = document.getElementById('mainSearchBox');
+                const input = document.getElementById('searchInput');
+                box.classList.toggle('mobile-open');
+                if (box.classList.contains('mobile-open')) input.focus();
+            },
+
+            getRealDeliveredSales(productId) {
+                const now = Date.now();
+                const DAY_MS = 24 * 60 * 60 * 1000;
+                const limits = {
+                    day: 1 * DAY_MS,
+                    week: 7 * DAY_MS,
+                    month: 30 * DAY_MS,
+                    halfYear: 180 * DAY_MS,
+                    year: 365 * DAY_MS
+                };
+
+                const stats = { day: 0, week: 0, month: 0, halfYear: 0, year: 0 };
+
+                Object.values(state.orders || {}).forEach(ord => {
+                    if ((ord.status || '').toLowerCase() === 'delivered' && Array.isArray(ord.items)) {
+                        const orderTime = Number(ord.deliveredAt || ord.timestamp) || now;
+                        const age = Math.max(0, now - orderTime);
+
+                        ord.items.forEach(item => {
+                            if (item.productId === productId) {
+                                const qty = Number(item.qty) || 1;
+                                if (age <= limits.day) stats.day += qty;
+                                if (age <= limits.week) stats.week += qty;
+                                if (age <= limits.month) stats.month += qty;
+                                if (age <= limits.halfYear) stats.halfYear += qty;
+                                if (age <= limits.year) stats.year += qty;
+                            }
+                        });
+                    }
+                });
+
+                return stats;
+            },
+
+            getProductTiers(prod) {
+                if (!prod || !prod.bulkTiers) return [];
+                const list = Array.isArray(prod.bulkTiers) ? prod.bulkTiers : Object.values(prod.bulkTiers);
+                return list
+                    .filter(t => t && Number(t.qty) >= 2 && Number(t.discount) > 0)
+                    .map(t => ({ qty: Number(t.qty), discount: Number(t.discount) }))
+                    .sort((a, b) => a.qty - b.qty);
+            },
+
+            getTierPricing(prod, qty) {
+                const basePrice = Number(prod.price) || 0;
+                const tiers = this.getProductTiers(prod);
+                const matched = tiers
+                    .filter(t => Number(qty) >= t.qty)
+                    .sort((a, b) => b.qty - a.qty)[0];
+
+                const offPerItem = matched ? matched.discount : 0;
+                const finalUnitPrice = Math.max(1, basePrice - offPerItem);
+
+                return { basePrice, offPerItem, finalUnitPrice, appliedTierQty: matched ? matched.qty : null };
+            },
+
             showProductDetails(productId) {
                 const prod = state.products[productId];
                 if (!prod) return;
 
-                const sales = prod.salesHistory || { day: 5, week: 24, month: 90, halfYear: 320, year: 700 };
-                const prodReviews = Object.values(state.reviews).filter(r => r.productId === productId);
+                const sales = this.getRealDeliveredSales(productId);
+                const prodReviews = Object.values(state.reviews || {}).filter(r => r.productId === productId);
                 const avgRating = prodReviews.length 
                     ? (prodReviews.reduce((acc, c) => acc + Number(c.rating), 0) / prodReviews.length).toFixed(1) 
-                    : "4.8";
+                    : "0.0";
 
-                const gallery = [prod.imageUrl, ...(prod.gallery || [])].filter(Boolean);
+                const rawGallery = [prod.imageUrl, ...(prod.gallery || [])].filter(Boolean);
+                const gallery = [...new Set(rawGallery)];
+                this.currentDetailGallery = gallery;
+                this.currentDetailImgIdx = 0;
 
                 const container = document.getElementById('productDetailContent');
                 container.innerHTML = `
                     <div style="display:flex; flex-direction:column; gap:16px;">
-                        <div style="position:relative; width:100%; height:260px; border-radius:var(--radius-md); overflow:hidden; background:#111;">
-                            <img id="detailActiveImg" src="${gallery[0]}" style="width:100%; height:100%; object-fit:contain;">
+                        <div id="detailSliderBox" style="position:relative; width:100%; height:270px; border-radius:var(--radius-md); overflow:hidden; background:#111; user-select:none;">
+                            <img id="detailActiveImg" src="${gallery[0]}" style="width:100%; height:100%; object-fit:contain; transition:opacity 0.2s ease;">
+                            ${gallery.length > 1 ? `
+                                <button type="button" onclick="app.slideDetailImage(-1)" style="position:absolute; left:10px; top:50%; transform:translateY(-50%); width:36px; height:36px; border-radius:50%; background:rgba(11,15,25,0.85); border:1px solid var(--border-glass); color:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:0.95rem; backdrop-filter:blur(6px);">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </button>
+                                <button type="button" onclick="app.slideDetailImage(1)" style="position:absolute; right:10px; top:50%; transform:translateY(-50%); width:36px; height:36px; border-radius:50%; background:rgba(11,15,25,0.85); border:1px solid var(--border-glass); color:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:0.95rem; backdrop-filter:blur(6px);">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
+                                <span id="detailImgCounter" style="position:absolute; bottom:10px; right:12px; background:rgba(11,15,25,0.85); border:1px solid var(--border-glass); color:#fff; font-size:0.72rem; font-weight:700; padding:3px 10px; border-radius:99px;">
+                                    1 / ${gallery.length}
+                                </span>
+                            ` : ''}
                         </div>
                         
                         ${gallery.length > 1 ? `
-                            <div style="display:flex; gap:8px; overflow-x:auto;">
-                                ${gallery.map(img => `
-                                    <img src="${img}" style="width:50px; height:50px; border-radius:8px; object-fit:cover; cursor:pointer; border:1px solid var(--border-glass);" onclick="document.getElementById('detailActiveImg').src='${img}'">
+                            <div style="display:flex; gap:8px; overflow-x:auto; padding-bottom:4px;">
+                                ${gallery.map((img, idx) => `
+                                    <img id="detailThumb-${idx}" src="${img}" style="width:54px; height:54px; border-radius:8px; object-fit:cover; cursor:pointer; flex-shrink:0; border:${idx === 0 ? '2px solid var(--accent-purple)' : '1px solid var(--border-glass)'}; opacity:${idx === 0 ? '1' : '0.65'};" onclick="app.setDetailImage(${idx})">
                                 `).join('')}
                             </div>
                         ` : ''}
@@ -1388,17 +1336,26 @@
                             <p style="color:var(--text-secondary); font-size:0.9rem; line-height:1.5;">${prod.description || 'Premium build quality tailored for peak experience.'}</p>
                         </div>
 
-                        <!-- Bulk Quantity Promotion -->
-                        <div style="background:rgba(168,85,247,0.08); border:1px dashed var(--accent-purple); border-radius:var(--radius-md); padding:10px 14px;">
-                            <div style="font-size:0.85rem; font-weight:700; color:#fff;">
-                                <i class="fa-solid fa-tag" style="color:var(--accent-gold);"></i> Bulk Tier Offer:
+                        ${(() => {
+                            const tiers = this.getProductTiers(prod);
+                            if (!tiers.length) return '';
+                            return `
+                            <div style="background:rgba(168,85,247,0.08); border:1px dashed var(--accent-purple); border-radius:var(--radius-md); padding:10px 14px;">
+                                <div style="font-size:0.85rem; font-weight:700; color:#fff; margin-bottom:6px;">
+                                    <i class="fa-solid fa-tag" style="color:var(--accent-gold);"></i> Bulk Quantity Savings (Rupees Off):
+                                </div>
+                                <div style="display:flex; flex-direction:column; gap:5px;">
+                                    ${tiers.map(t => `
+                                        <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(0,0,0,0.28); padding:5px 10px; border-radius:7px; font-size:0.8rem;">
+                                            <span style="color:var(--text-secondary);">Buy <strong style="color:#fff;">${t.qty}+ Units</strong></span>
+                                            <span style="color:var(--accent-green); font-weight:700;">₹${t.discount.toLocaleString()} OFF / unit (₹${Math.max(1, prod.price - t.discount).toLocaleString()}/each)</span>
+                                        </div>
+                                    `).join('')}
+                                </div>
                             </div>
-                            <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:2px;">
-                                Buy ${prod.bonusQty || 2} or more units and get an instant extra 5% discount at checkout!
-                            </p>
-                        </div>
+                            `;
+                        })()}
 
-                        <!-- Real-time Verified Product Sales Insights -->
                         <div style="background:rgba(255,255,255,0.02); border:1px solid var(--border-glass); border-radius:var(--radius-md); padding:12px;">
                             <span style="font-size:0.8rem; font-weight:700; color:var(--text-secondary);"><i class="fa-solid fa-chart-line"></i> Verified Purchases Tracked:</span>
                             <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap:6px; margin-top:8px; text-align:center;">
@@ -1410,38 +1367,62 @@
                             </div>
                         </div>
 
-                        <!-- Reviews section -->
-                        <div>
-                            <h4 style="font-size:0.95rem; font-weight:700; margin-bottom:10px;">Ratings & Customer Reviews</h4>
-                            
-                            <!-- Add Review Form -->
-                            <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-glass); border-radius:var(--radius-md); padding:12px; margin-bottom:14px;">
-                                <div style="font-size:0.8rem; font-weight:600; margin-bottom:6px;">Leave a rating & review:</div>
-                                <div class="star-rating" id="reviewStarInput" style="margin-bottom:8px;">
-                                    <i class="fa-solid fa-star active" onclick="app.setReviewRating(1)"></i>
-                                    <i class="fa-solid fa-star active" onclick="app.setReviewRating(2)"></i>
-                                    <i class="fa-solid fa-star active" onclick="app.setReviewRating(3)"></i>
-                                    <i class="fa-solid fa-star active" onclick="app.setReviewRating(4)"></i>
-                                    <i class="fa-solid fa-star active" onclick="app.setReviewRating(5)"></i>
-                                </div>
-                                <input type="text" id="reviewAuthor" class="form-control" style="margin-bottom:6px;" placeholder="Your Name">
-                                <textarea id="reviewText" class="form-control" placeholder="Share your experience with this product..."></textarea>
-                                <button class="btn-gradient" style="margin-top:8px; padding:6px 14px; font-size:0.8rem;" onclick="app.submitReview('${prod.id}')">Submit Review</button>
-                            </div>
+                        ${(() => {
+                            const currentUserId = this.getUserReviewId();
+                            const savedName = localStorage.getItem('apex_user_name') || '';
+                            const myReview = prodReviews.find(r => r.userId === currentUserId);
+                            const activeStars = myReview ? Number(myReview.rating) : 5;
+                            state.selectedRating = activeStars;
 
-                            <!-- List of reviews -->
-                            <div style="display:flex; flex-direction:column; gap:8px; max-height:180px; overflow-y:auto;">
-                                ${prodReviews.length ? prodReviews.map(r => `
-                                    <div style="background:rgba(255,255,255,0.02); padding:8px 12px; border-radius:8px; border:1px solid var(--border-glass);">
-                                        <div style="display:flex; justify-content:space-between; align-items:center;">
-                                            <strong style="font-size:0.8rem;">${r.author}</strong>
-                                            <div style="color:var(--accent-gold); font-size:0.75rem;">${'★'.repeat(r.rating)}</div>
-                                        </div>
-                                        <div style="font-size:0.8rem; color:var(--text-secondary); margin-top:3px;">${r.comment}</div>
+                            return `
+                            <div>
+                                <h4 style="font-size:0.95rem; font-weight:700; margin-bottom:10px;">Ratings & Customer Reviews</h4>
+                                <div style="background:rgba(255,255,255,0.03); border:1px solid ${myReview ? 'rgba(168,85,247,0.4)' : 'var(--border-glass)'}; border-radius:var(--radius-md); padding:12px; margin-bottom:14px;">
+                                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                                        <span style="font-size:0.8rem; font-weight:700; color:${myReview ? 'var(--accent-purple)' : 'var(--text-primary)'};">
+                                            ${myReview ? '<i class="fa-solid fa-pen-to-square"></i> Edit Your Existing Review:' : 'Leave a Rating & Review:'}
+                                        </span>
+                                        ${myReview ? '<span style="font-size:0.7rem; background:rgba(168,85,247,0.18); color:var(--accent-purple); padding:2px 8px; border-radius:99px; font-weight:600;">1 Review Limit Active</span>' : ''}
                                     </div>
-                                `).join('') : '<p style="font-size:0.8rem; color:var(--text-muted);">No reviews written yet. Be the first to review!</p>'}
+
+                                    <div class="star-rating" id="reviewStarInput" style="margin-bottom:8px;">
+                                        ${[1,2,3,4,5].map(num => `
+                                            <i class="fa-solid fa-star ${num <= activeStars ? 'active' : ''}" onclick="app.setReviewRating(${num})"></i>
+                                        `).join('')}
+                                    </div>
+
+                                    <input type="text" id="reviewAuthor" class="form-control" style="margin-bottom:6px;" 
+                                        placeholder="Your Name" value="${(myReview ? myReview.author : savedName).replace(/"/g, '&quot;')}">
+                                    
+                                    <textarea id="reviewText" class="form-control" 
+                                        placeholder="Share your experience with this product...">${myReview ? myReview.comment : ''}</textarea>
+                                    
+                                    <button class="btn-gradient" style="margin-top:8px; padding:7px 16px; font-size:0.8rem;" onclick="app.submitReview('${prod.id}')">
+                                        <i class="fa-solid ${myReview ? 'fa-rotate' : 'fa-paper-plane'}"></i> ${myReview ? 'Update My Review' : 'Submit Review'}
+                                    </button>
+                                </div>
+
+                                <div style="display:flex; flex-direction:column; gap:8px; max-height:180px; overflow-y:auto;">
+                                    ${prodReviews.length ? prodReviews.map(r => {
+                                        const isMine = r.userId === currentUserId;
+                                        return `
+                                        <div style="background:${isMine ? 'rgba(168,85,247,0.08)' : 'rgba(255,255,255,0.02)'}; padding:8px 12px; border-radius:8px; border:1px solid ${isMine ? 'rgba(168,85,247,0.4)' : 'var(--border-glass)'};">
+                                            <div style="display:flex; justify-content:space-between; align-items:center;">
+                                                <div style="display:flex; align-items:center; gap:6px;">
+                                                    <strong style="font-size:0.8rem;">${r.author}</strong>
+                                                    ${isMine ? '<span style="font-size:0.65rem; background:var(--accent-purple); color:#fff; padding:1px 6px; border-radius:99px;">You</span>' : ''}
+                                                    ${r.edited ? '<span style="font-size:0.65rem; color:var(--text-muted);">(edited)</span>' : ''}
+                                                </div>
+                                                <div style="color:var(--accent-gold); font-size:0.75rem;">${'★'.repeat(r.rating)}</div>
+                                            </div>
+                                            <div style="font-size:0.8rem; color:var(--text-secondary); margin-top:3px;">${r.comment}</div>
+                                        </div>
+                                        `;
+                                    }).join('') : '<p style="font-size:0.8rem; color:var(--text-muted);">No reviews written yet. Be the first to review!</p>'}
+                                </div>
                             </div>
-                        </div>
+                            `;
+                        })()}
 
                         <button class="btn-gradient" style="padding:12px; border-radius:var(--radius-md); width:100%;" onclick="app.addToCart('${prod.id}'); app.closeModal('productDetailModal');">
                             <i class="fa-solid fa-cart-plus"></i> Add Product To Cart
@@ -1452,21 +1433,57 @@
                 this.openModal('productDetailModal');
             },
 
+            slideDetailImage(step) {
+                if (!this.currentDetailGallery || this.currentDetailGallery.length <= 1) return;
+                const total = this.currentDetailGallery.length;
+                const nextIdx = (this.currentDetailImgIdx + step + total) % total;
+                this.setDetailImage(nextIdx);
+            },
+
+            setDetailImage(idx) {
+                if (!this.currentDetailGallery || !this.currentDetailGallery[idx]) return;
+                this.currentDetailImgIdx = idx;
+
+                const mainImg = document.getElementById('detailActiveImg');
+                const counter = document.getElementById('detailImgCounter');
+                if (mainImg) mainImg.src = this.currentDetailGallery[idx];
+                if (counter) counter.innerText = `${idx + 1} / ${this.currentDetailGallery.length}`;
+
+                this.currentDetailGallery.forEach((_, i) => {
+                    const thumb = document.getElementById(`detailThumb-${i}`);
+                    if (thumb) {
+                        thumb.style.border = i === idx ? '2px solid var(--accent-purple)' : '1px solid var(--border-glass)';
+                        thumb.style.opacity = i === idx ? '1' : '0.65';
+                    }
+                });
+            },
+
             setReviewRating(stars) {
                 state.selectedRating = stars;
-                const starElements = document.querySelectorAll('#reviewStarInput i');
-                starElements.forEach((el, idx) => {
+                document.querySelectorAll('#reviewStarInput i').forEach((el, idx) => {
                     el.classList.toggle('active', idx < stars);
                 });
+            },
+
+            getUserReviewId() {
+                const phone = (localStorage.getItem('apex_user_phone') || '').replace(/[^0-9]/g, '');
+                if (phone) return 'user_' + phone;
+
+                let deviceId = localStorage.getItem('apex_device_uid');
+                if (!deviceId) {
+                    deviceId = 'dev_' + Date.now() + '_' + Math.random().toString(36).substring(2, 8);
+                    localStorage.setItem('apex_device_uid', deviceId);
+                }
+                return deviceId;
             },
 
             submitReview(productId) {
                 const author = document.getElementById('reviewAuthor').value.trim() || 'Verified Customer';
                 const comment = document.getElementById('reviewText').value.trim();
+                const userId = this.getUserReviewId();
 
-                // Check blocked list
-                const localPhone = localStorage.getItem('apex_user_phone') || author;
-                if (state.blockedUsers && state.blockedUsers[localPhone]) {
+                const localPhone = localStorage.getItem('apex_user_phone') || '';
+                if (state.blockedUsers && (state.blockedUsers[localPhone] || state.blockedUsers[author] || state.blockedUsers[userId])) {
                     this.showToast('You have been restricted from submitting reviews by admin.');
                     return;
                 }
@@ -1476,22 +1493,75 @@
                     return;
                 }
 
-                const revRef = push(ref(db, 'reviews'));
-                set(revRef, {
-                    id: revRef.key,
-                    productId: productId,
-                    author: author,
-                    rating: state.selectedRating,
-                    comment: comment,
-                    timestamp: Date.now()
-                }).then(() => {
-                    this.showToast('Review submitted successfully!');
-                    this.showProductDetails(productId);
-                });
+                const existingEntry = Object.entries(state.reviews || {}).find(
+                    ([_, r]) => r.productId === productId && r.userId === userId
+                );
+
+                if (existingEntry) {
+                    const [existingKey] = existingEntry;
+                    update(ref(db, `reviews/${existingKey}`), {
+                        author: author,
+                        rating: state.selectedRating,
+                        comment: comment,
+                        edited: true,
+                        timestamp: Date.now()
+                    }).then(() => {
+                        this.showToast('✅ Your review & rating has been updated!');
+                        this.showProductDetails(productId);
+                    });
+                } else {
+                    const revRef = push(ref(db, 'reviews'));
+                    set(revRef, {
+                        id: revRef.key,
+                        userId: userId,
+                        productId: productId,
+                        author: author,
+                        rating: state.selectedRating,
+                        comment: comment,
+                        edited: false,
+                        timestamp: Date.now()
+                    }).then(() => {
+                        this.showToast('⭐ Review submitted successfully!');
+                        this.showProductDetails(productId);
+                    });
+                }
             },
 
-            // Cart Management
-            addToCart(productId) {
+            changeCardQty(productId, delta) {
+                const prod = state.products[productId];
+                const qtyEl = document.getElementById(`card-qty-${productId}`);
+                if (!prod || !qtyEl) return;
+
+                let current = parseInt(qtyEl.innerText) || 1;
+                current += delta;
+
+                if (current < 1) current = 1;
+                if (current > prod.stock) {
+                    current = prod.stock;
+                    this.showToast(`Only ${prod.stock} units available in stock.`);
+                }
+                qtyEl.innerText = current;
+            },
+
+            addCardQtyToCart(productId) {
+                const qtyEl = document.getElementById(`card-qty-${productId}`);
+                const selectedQty = qtyEl ? (parseInt(qtyEl.innerText) || 1) : 1;
+                this.addToCart(productId, selectedQty);
+                if (qtyEl) qtyEl.innerText = '1';
+            },
+
+            buyNowCard(productId) {
+                const prod = state.products[productId];
+                if (!prod || prod.stock <= 0) return;
+
+                const qtyEl = document.getElementById(`card-qty-${productId}`);
+                const selectedQty = qtyEl ? (parseInt(qtyEl.innerText) || 1) : 1;
+
+                this.addToCart(productId, selectedQty);
+                this.startCheckout();
+            },
+
+            addToCart(productId, qtyToAdd = 1) {
                 const prod = state.products[productId];
                 if (!prod || prod.stock <= 0) {
                     this.showToast('Product is currently out of stock.');
@@ -1500,17 +1570,21 @@
 
                 const existing = state.cart.find(item => item.id === productId);
                 if (existing) {
-                    if (existing.qty + 1 > prod.stock) {
+                    if (existing.qty + qtyToAdd > prod.stock) {
                         this.showToast('Maximum available inventory reached.');
                         return;
                     }
-                    existing.qty += 1;
+                    existing.qty += qtyToAdd;
                 } else {
-                    state.cart.push({ id: productId, qty: 1 });
+                    if (qtyToAdd > prod.stock) {
+                        this.showToast('Requested quantity exceeds stock.');
+                        return;
+                    }
+                    state.cart.push({ id: productId, qty: qtyToAdd });
                 }
 
                 this.syncCart();
-                this.showToast(`Added ${prod.name.substring(0, 20)}... to bag!`);
+                this.showToast(`Added ${qtyToAdd}x ${prod.name.substring(0, 18)}... to bag!`);
             },
 
             updateQty(productId, delta) {
@@ -1562,15 +1636,8 @@
                     const prod = state.products[cartItem.id];
                     if (!prod) return;
 
-                    // Bulk threshold check for discount
-                    let effectivePrice = prod.price;
-                    const bonusQty = prod.bonusQty || 2;
-                    let extraTierDiscount = false;
-                    if (cartItem.qty >= bonusQty) {
-                        effectivePrice = Math.round(prod.price * 0.95);
-                        extraTierDiscount = true;
-                    }
-
+                    const pricing = this.getTierPricing(prod, cartItem.qty);
+                    const effectivePrice = pricing.finalUnitPrice;
                     const itemTotal = effectivePrice * cartItem.qty;
                     total += itemTotal;
 
@@ -1582,7 +1649,7 @@
                             <div class="cart-item-title">${prod.name}</div>
                             <div class="cart-item-price">
                                 ₹${effectivePrice.toLocaleString()} 
-                                ${extraTierDiscount ? `<span style="font-size:0.65rem; color:var(--accent-gold);">(5% Tier Applied)</span>` : ''}
+                                ${pricing.offPerItem > 0 ? `<span style="font-size:0.65rem; color:var(--accent-green);">(₹${pricing.offPerItem} OFF/item Applied)</span>` : ''}
                             </div>
                             <div class="cart-qty-ctrl">
                                 <button class="qty-btn" onclick="app.updateQty('${prod.id}', -1)"><i class="fa-solid fa-minus"></i></button>
@@ -1601,8 +1668,7 @@
             },
 
             toggleCart(open) {
-                const overlay = document.getElementById('cartOverlay');
-                overlay.classList.toggle('active', open);
+                document.getElementById('cartOverlay').classList.toggle('active', open);
             },
 
             startCheckout() {
@@ -1612,18 +1678,15 @@
                 }
                 this.toggleCart(false);
 
-                // Pre-populate with locally stored details
                 document.getElementById('chkName').value = localStorage.getItem('apex_user_name') || '';
                 document.getElementById('chkPhone').value = localStorage.getItem('apex_user_phone') || '';
                 document.getElementById('chkAddress').value = localStorage.getItem('apex_user_address') || '';
 
-                // Calculate subtotal
                 let total = 0;
                 state.cart.forEach(item => {
                     const prod = state.products[item.id];
                     if (prod) {
-                        let eff = prod.price;
-                        if (item.qty >= (prod.bonusQty || 2)) eff = Math.round(prod.price * 0.95);
+                        const eff = this.getTierPricing(prod, item.qty).finalUnitPrice;
                         total += eff * item.qty;
                     }
                 });
@@ -1643,7 +1706,6 @@
                     return;
                 }
 
-                // Save locally
                 localStorage.setItem('apex_user_name', name);
                 localStorage.setItem('apex_user_phone', phone);
                 localStorage.setItem('apex_user_address', address);
@@ -1651,8 +1713,7 @@
                 let total = 0;
                 const orderItems = state.cart.map(item => {
                     const prod = state.products[item.id] || {};
-                    let eff = prod.price || 0;
-                    if (item.qty >= (prod.bonusQty || 2)) eff = Math.round(eff * 0.95);
+                    const eff = this.getTierPricing(prod, item.qty).finalUnitPrice;
                     total += eff * item.qty;
                     return {
                         productId: item.id,
@@ -1672,12 +1733,12 @@
                     address: address,
                     items: orderItems,
                     totalAmount: total,
+                    paidAmount: 0,
                     paymentMethod: payment,
-                    status: "Confirmed", // Initial state
+                    status: "Confirmed",
                     timestamp: Date.now()
                 };
 
-                // Deduct inventory
                 orderItems.forEach(i => {
                     const prod = state.products[i.productId];
                     if (prod && prod.stock >= i.qty) {
@@ -1693,13 +1754,11 @@
                     this.closeModal('checkoutModal');
                     this.showToast('🎉 Order successfully confirmed!');
 
-                    // Trigger direct Gmail receipt option
-                    const sendEmail = confirm('Order placed! Would you like to send this order receipt directly to Admin Gmail?');
+                    const sendEmail = confirm('Order placed! Would you like to send this order receipt via Gmail App?');
                     if (sendEmail) {
                         const adminGmail = state.settings.gmail || 'support@apexstore.com';
                         const subject = encodeURIComponent(`New Order Receipt: ${orderId} - ${name}`);
-                        
-                        const itemListTxt = orderItems.map(it => `• ${it.name} (x${it.qty}) - ₹${it.price * it.qty}`).join('\n');
+                        const itemListTxt = orderItems.map(it => `- ${it.name} (x${it.qty}) = ₹${it.price * it.qty}`).join('\n');
                         const emailBody = encodeURIComponent(
                             `NEW ORDER RECEIPT: ${orderId}\n\n` +
                             `Customer Name: ${name}\n` +
@@ -1710,27 +1769,19 @@
                             `Payment Method: ${payment}\n\n` +
                             `Thank you!`
                         );
-
-                        // Mobile aur Desktop dono par direct Gmail compose window kholne ke liye:
-                        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${adminGmail}&su=${subject}&body=${emailBody}`;
-                        window.open(gmailUrl, '_blank');
+                        window.location.href = `mailto:${adminGmail}?subject=${subject}&body=${emailBody}`;
                     }
                 });
             },
 
-            // User Profile and Order Management
             loadLocalProfile() {
                 const name = localStorage.getItem('apex_user_name') || '';
                 const phone = localStorage.getItem('apex_user_phone') || '';
                 const address = localStorage.getItem('apex_user_address') || '';
 
-                const pName = document.getElementById('profName');
-                const pPhone = document.getElementById('profPhone');
-                const pAddr = document.getElementById('profAddress');
-
-                if (pName) pName.value = name;
-                if (pPhone) pPhone.value = phone;
-                if (pAddr) pAddr.value = address;
+                if (document.getElementById('profName')) document.getElementById('profName').value = name;
+                if (document.getElementById('profPhone')) document.getElementById('profPhone').value = phone;
+                if (document.getElementById('profAddress')) document.getElementById('profAddress').value = address;
             },
 
             saveLocalProfile() {
@@ -1762,7 +1813,6 @@
                     return;
                 }
 
-                // Filter user orders by telephone
                 const userOrders = Object.entries(state.orders)
                     .map(([key, val]) => ({ ...val, dbKey: key }))
                     .filter(o => o.phone && o.phone.replace(/[^0-9]/g, '') === userPhone.replace(/[^0-9]/g, ''))
@@ -1778,18 +1828,31 @@
                     const currentIdx = statusSequence.indexOf(ord.status);
                     const canEdit = ord.status === "Confirmed";
 
+                    const totalAmt = Number(ord.totalAmount) || 0;
+                    const paidAmt = Number(ord.paidAmount) || 0;
+                    const pendingAmt = Math.max(0, totalAmt - paidAmt);
+
                     return `
                         <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border-glass); border-radius:var(--radius-md); padding:14px;">
                             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
                                 <strong style="font-size:0.9rem;">#${ord.orderId}</strong>
-                                <span style="font-size:0.75rem; color:var(--accent-gold); font-weight:700;">₹${ord.totalAmount}</span>
+                                <span style="font-size:0.85rem; color:var(--accent-gold); font-weight:800;">Total: ₹${totalAmt.toLocaleString()}</span>
                             </div>
+
+                            <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; background:rgba(0,0,0,0.3); padding:8px 10px; border-radius:8px; border:1px solid var(--border-glass);">
+                                <span style="background:rgba(16,185,129,0.18); color:#10b981; font-size:0.75rem; font-weight:700; padding:3px 10px; border-radius:99px;">
+                                    <i class="fa-solid fa-circle-check"></i> Paid: ₹${paidAmt.toLocaleString()}
+                                </span>
+                                <span style="background:${pendingAmt > 0 ? 'rgba(239,68,68,0.18)' : 'rgba(16,185,129,0.18)'}; color:${pendingAmt > 0 ? '#ef4444' : '#10b981'}; font-size:0.75rem; font-weight:700; padding:3px 10px; border-radius:99px;">
+                                    <i class="fa-solid ${pendingAmt > 0 ? 'fa-clock' : 'fa-check-double'}"></i> ${pendingAmt > 0 ? `Pending: ₹${pendingAmt.toLocaleString()}` : 'No Pending Due'}
+                                </span>
+                            </div>
+
                             <div style="font-size:0.8rem; color:var(--text-secondary); margin-bottom:10px;">
                                 Deliver to: <strong>${ord.customerName}</strong> (${ord.phone})<br>
                                 ${ord.address}
                             </div>
 
-                            <!-- Stepper Timeline -->
                             <div class="timeline">
                                 ${statusSequence.map((step, idx) => `
                                     <div class="timeline-step ${idx < currentIdx ? 'completed' : (idx === currentIdx ? 'active' : '')}">
@@ -1841,312 +1904,129 @@
                 });
             },
 
-            // Admin Panel Controls
-            requestAdminAccess() {
-                if (state.isAdmin) {
-                    this.showAdminDashboard();
-                    return;
-                }
-                const pin = prompt('Enter Secure Admin Security PIN (Default: 1234):');
-                if (pin === state.adminPin) {
-                    state.isAdmin = true;
-                    window.location.hash = 'admin';
-                    this.showAdminDashboard();
-                    this.showToast('Unlocked Admin Mode');
-                } else if (pin !== null) {
-                    this.showToast('Incorrect Admin PIN.');
-                }
-            },
-
-            showAdminDashboard() {
-                document.getElementById('storeView').style.display = 'none';
-                document.getElementById('adminView').style.display = 'block';
-                this.updateStats();
-                this.renderAdminProducts();
-                this.renderAdminOrders();
-                this.renderAdminReviews();
-                this.populateAdminSettings();
-            },
-
-            exitAdmin() {
-                state.isAdmin = false;
-                window.location.hash = '';
-                document.getElementById('adminView').style.display = 'none';
-                document.getElementById('storeView').style.display = 'block';
-            },
-
-            showStore() {
-                if (state.isAdmin) this.exitAdmin();
-            },
-
-            switchAdminTab(tab) {
-                ['products', 'orders', 'reviews', 'supportSettings'].forEach(t => {
-                    document.getElementById(`adminTab${t.charAt(0).toUpperCase() + t.slice(1)}`).style.display = (t === tab ? 'block' : 'none');
-                });
-                document.querySelectorAll('.admin-tab').forEach(b => {
-                    b.classList.toggle('active', b.innerText.toLowerCase().includes(tab.toLowerCase()));
-                });
-            },
-
-            updateStats() {
-                const orders = Object.values(state.orders);
-                const revenue = orders.reduce((sum, o) => sum + (Number(o.totalAmount) || 0), 0);
-                const pending = orders.filter(o => o.status !== "Delivered").length;
-                const activeProducts = Object.keys(state.products).length;
-
-                const revEl = document.getElementById('adminRevenue');
-                const totEl = document.getElementById('adminTotalOrders');
-                const pndEl = document.getElementById('adminPendingOrders');
-                const actEl = document.getElementById('adminActiveProducts');
-
-                if (revEl) revEl.innerText = `₹${revenue.toLocaleString()}`;
-                if (totEl) totEl.innerText = orders.length;
-                if (pndEl) pndEl.innerText = pending;
-                if (actEl) actEl.innerText = activeProducts;
-            },
-
-            renderAdminProducts() {
-                const list = document.getElementById('adminProductList');
-                if (!list) return;
-
-                list.innerHTML = Object.values(state.products).map(p => `
-                    <div style="display:flex; align-items:center; justify-content:space-between; background:var(--bg-card); padding:12px; border-radius:var(--radius-md); border:1px solid var(--border-glass);">
-                        <div style="display:flex; align-items:center; gap:12px;">
-                            <img src="${p.imageUrl}" style="width:45px; height:45px; border-radius:8px; object-fit:cover;">
-                            <div>
-                                <div style="font-weight:700; font-size:0.9rem;">${p.name}</div>
-                                <div style="font-size:0.75rem; color:var(--text-muted);">${p.category} | ₹${p.price} | Stock: ${p.stock}</div>
-                            </div>
-                        </div>
-                        <div style="display:flex; gap:8px;">
-                            <button class="btn-glass" style="padding:6px 12px; font-size:0.8rem;" onclick="app.editAdminProduct('${p.id}')">Edit</button>
-                            <button class="btn-glass" style="padding:6px 12px; font-size:0.8rem; color:var(--accent-red);" onclick="app.deleteAdminProduct('${p.id}')">Delete</button>
-                        </div>
-                    </div>
-                `).join('');
-            },
-
-            openProductModal(prodId = null) {
-                document.getElementById('adminProductModalTitle').innerText = prodId ? 'Edit Product' : 'Add New Product';
-                document.getElementById('admProdId').value = prodId || '';
-
-                if (prodId && state.products[prodId]) {
-                    const p = state.products[prodId];
-                    document.getElementById('admProdName').value = p.name || '';
-                    document.getElementById('admProdCategory').value = p.category || '';
-                    document.getElementById('admProdPrice').value = p.price || '';
-                    document.getElementById('admProdOrigPrice').value = p.originalPrice || '';
-                    document.getElementById('admProdStock').value = p.stock || 0;
-                    document.getElementById('admProdBonusQty').value = p.bonusQty || 2;
-                    document.getElementById('admProdImage').value = p.imageUrl || '';
-                    document.getElementById('admProdGallery').value = (p.gallery || []).join(', ');
-                    document.getElementById('admProdDesc').value = p.description || '';
-                } else {
-                    document.getElementById('admProdName').value = '';
-                    document.getElementById('admProdCategory').value = '';
-                    document.getElementById('admProdPrice').value = '';
-                    document.getElementById('admProdOrigPrice').value = '';
-                    document.getElementById('admProdStock').value = 15;
-                    document.getElementById('admProdBonusQty').value = 2;
-                    document.getElementById('admProdImage').value = '';
-                    document.getElementById('admProdGallery').value = '';
-                    document.getElementById('admProdDesc').value = '';
-                }
-                this.openModal('adminProductModal');
-            },
-
-            editAdminProduct(id) {
-                this.openProductModal(id);
-            },
-
-            saveAdminProduct() {
-                const id = document.getElementById('admProdId').value || ('prod_' + Date.now());
-                const name = document.getElementById('admProdName').value.trim();
-                const category = document.getElementById('admProdCategory').value.trim();
-                const price = Number(document.getElementById('admProdPrice').value);
-                const originalPrice = Number(document.getElementById('admProdOrigPrice').value) || (price * 1.3);
-                const stock = Number(document.getElementById('admProdStock').value) || 0;
-                const bonusQty = Number(document.getElementById('admProdBonusQty').value) || 2;
-                const imageUrl = document.getElementById('admProdImage').value.trim();
-                const galleryRaw = document.getElementById('admProdGallery').value.trim();
-                const description = document.getElementById('admProdDesc').value.trim();
-
-                if (!name || !category || !price || !imageUrl) {
-                    this.showToast('Please fill all required asterisks fields.');
-                    return;
-                }
-
-                const gallery = galleryRaw ? galleryRaw.split(',').map(s => s.trim()).filter(Boolean) : [];
-
-                const payload = {
-                    id,
-                    name,
-                    category,
-                    price,
-                    originalPrice,
-                    stock,
-                    bonusQty,
-                    imageUrl,
-                    gallery,
-                    description,
-                    salesHistory: state.products[id]?.salesHistory || { day: 1, week: 5, month: 20, halfYear: 80, year: 200 }
-                };
-
-                set(ref(db, `products/${id}`), payload).then(() => {
-                    this.showToast('Product synced to Firebase database!');
-                    this.closeModal('adminProductModal');
-                });
-            },
-
-            deleteAdminProduct(id) {
-                if (confirm('Delete this product permanently from the database?')) {
-                    remove(ref(db, `products/${id}`)).then(() => {
-                        this.showToast('Product removed.');
-                    });
-                }
-            },
-
-            renderAdminOrders() {
-                const list = document.getElementById('adminOrderList');
-                if (!list) return;
-
-                const entries = Object.entries(state.orders).sort((a,b) => b[1].timestamp - a[1].timestamp);
-
-                if (entries.length === 0) {
-                    list.innerHTML = `<p style="color:var(--text-muted);">No customer orders recorded yet.</p>`;
-                    return;
-                }
-
-                list.innerHTML = entries.map(([key, ord]) => {
-                    const cleanPhone = (ord.phone || '').replace(/[^0-9]/g, '');
-                    const itemsTxt = (ord.items || []).map(i => `${i.name} (x${i.qty})`).join(', ');
-
-                    return `
-                        <div style="background:var(--bg-card); border:1px solid var(--border-glass); border-radius:var(--radius-md); padding:16px;">
-                            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px;">
-                                <div>
-                                    <h4 style="font-size:1rem; font-weight:800;">#${ord.orderId}</h4>
-                                    <div style="font-size:0.8rem; color:var(--text-muted);">${new Date(ord.timestamp).toLocaleString()}</div>
-                                </div>
-                                <span style="font-size:1.1rem; font-weight:800;" class="gradient-text">₹${ord.totalAmount}</span>
-                            </div>
-
-                            <div style="font-size:0.85rem; line-height:1.5; margin-bottom:12px;">
-                                <strong>Customer:</strong> ${ord.customerName} | 
-                                <a href="https://wa.me/${cleanPhone}" target="_blank" style="color:var(--accent-green); text-decoration:none;">
-                                    <i class="fa-brands fa-whatsapp"></i> ${ord.phone} (Open WhatsApp)
-                                </a><br>
-                                <strong>Address:</strong> ${ord.address}<br>
-                                <strong>Items Ordered:</strong> ${itemsTxt}<br>
-                                <strong>Payment:</strong> ${ord.paymentMethod}
-                            </div>
-
-                            <div style="display:flex; align-items:center; gap:10px; background:rgba(0,0,0,0.25); padding:8px 12px; border-radius:8px;">
-                                <span style="font-size:0.8rem; color:var(--text-muted);">Status:</span>
-                                <select class="form-control" style="width:auto; padding:4px 8px; font-size:0.8rem;" onchange="app.updateOrderStatus('${key}', this.value)">
-                                    <option value="Confirmed" ${ord.status==='Confirmed'?'selected':''}>Confirmed</option>
-                                    <option value="Packed" ${ord.status==='Packed'?'selected':''}>Packed</option>
-                                    <option value="Shipped" ${ord.status==='Shipped'?'selected':''}>Shipped</option>
-                                    <option value="Out for delivery" ${ord.status==='Out for delivery'?'selected':''}>Out for delivery</option>
-                                    <option value="Delivered" ${ord.status==='Delivered'?'selected':''}>Delivered</option>
-                                </select>
-                            </div>
-                        </div>
-                    `;
-                }).join('');
-            },
-
-            updateOrderStatus(dbKey, newStatus) {
-                update(ref(db, `orders/${dbKey}`), { status: newStatus }).then(() => {
-                    this.showToast(`Order status updated to "${newStatus}"`);
-                });
-            },
-
-            renderAdminReviews() {
-                const list = document.getElementById('adminReviewList');
-                if (!list) return;
-
-                const entries = Object.entries(state.reviews);
-                if (entries.length === 0) {
-                    list.innerHTML = `<p style="color:var(--text-muted);">No user reviews submitted yet.</p>`;
-                    return;
-                }
-
-                list.innerHTML = entries.map(([key, rev]) => {
-                    const isBlocked = state.blockedUsers && state.blockedUsers[rev.author];
-                    return `
-                        <div style="background:var(--bg-card); border:1px solid var(--border-glass); border-radius:var(--radius-md); padding:12px; display:flex; justify-content:space-between; align-items:center;">
-                            <div>
-                                <div style="display:flex; align-items:center; gap:8px;">
-                                    <strong>${rev.author}</strong>
-                                    <span style="color:var(--accent-gold); font-size:0.75rem;">★ ${rev.rating}</span>
-                                    ${isBlocked ? '<span style="font-size:0.7rem; color:var(--accent-red);">(Blocked User)</span>' : ''}
-                                </div>
-                                <div style="font-size:0.85rem; color:var(--text-secondary); margin-top:3px;">${rev.comment}</div>
-                            </div>
-                            <div style="display:flex; gap:6px;">
-                                <button class="btn-glass" style="padding:4px 10px; font-size:0.75rem; color:var(--accent-gold);" onclick="app.toggleBlockUser('${rev.author}')">
-                                    ${isBlocked ? 'Unblock User' : 'Block User'}
-                                </button>
-                                <button class="btn-glass" style="padding:4px 10px; font-size:0.75rem; color:var(--accent-red);" onclick="app.deleteReview('${key}')">
-                                    Delete
-                                </button>
-                            </div>
-                        </div>
-                    `;
-                }).join('');
-            },
-
-            deleteReview(revKey) {
-                if (confirm('Delete this user review?')) {
-                    remove(ref(db, `reviews/${revKey}`)).then(() => {
-                        this.showToast('Review removed.');
-                    });
-                }
-            },
-
-            toggleBlockUser(userIdentifier) {
-                const isBlocked = state.blockedUsers && state.blockedUsers[userIdentifier];
-                if (isBlocked) {
-                    remove(ref(db, `blockedUsers/${userIdentifier}`)).then(() => {
-                        this.showToast(`Unblocked ${userIdentifier}`);
-                    });
-                } else {
-                    set(ref(db, `blockedUsers/${userIdentifier}`), true).then(() => {
-                        this.showToast(`User ${userIdentifier} restricted from writing reviews.`);
-                    });
-                }
-            },
-
-            populateAdminSettings() {
-                const s = state.settings;
-                document.getElementById('settingStoreName').value = s.storeName || '';
-                document.getElementById('settingBannerText').value = s.bannerText || '';
-                document.getElementById('settingWhatsapp').value = s.whatsapp || '';
-                document.getElementById('settingGmail').value = s.gmail || '';
-                document.getElementById('settingTelegram').value = s.telegram || '';
-            },
-
-            saveStoreSettings() {
-                const payload = {
-                    storeName: document.getElementById('settingStoreName').value.trim(),
-                    bannerText: document.getElementById('settingBannerText').value.trim(),
-                    whatsapp: document.getElementById('settingWhatsapp').value.trim(),
-                    gmail: document.getElementById('settingGmail').value.trim(),
-                    telegram: document.getElementById('settingTelegram').value.trim()
-                };
-
-                update(ref(db, 'settings'), payload).then(() => {
-                    this.showToast('Store settings saved successfully!');
-                });
-            },
-
-            // Floating support dock toggle
             toggleSupportMenu() {
                 document.getElementById('supportMenu').classList.toggle('open');
             },
 
-            // UI Helpers
+            getUserChatId() {
+                const phone = (localStorage.getItem('apex_user_phone') || '').replace(/[^0-9]/g, '');
+                if (phone) return 'chat_' + phone;
+
+                let deviceId = localStorage.getItem('apex_device_uid');
+                if (!deviceId) {
+                    deviceId = 'dev_' + Date.now() + '_' + Math.random().toString(36).substring(2, 8);
+                    localStorage.setItem('apex_device_uid', deviceId);
+                }
+                return 'chat_' + deviceId;
+            },
+
+            openLiveChatModal() {
+                document.getElementById('supportMenu').classList.remove('open');
+                this.openModal('liveChatModal');
+                this.renderUserChatMessages();
+                setTimeout(() => document.getElementById('userChatInput').focus(), 200);
+            },
+
+            sendUserChatMessage() {
+                const input = document.getElementById('userChatInput');
+                const text = input.value.trim();
+                if (!text) return;
+
+                const chatId = this.getUserChatId();
+                const userName = localStorage.getItem('apex_user_name') || 'Guest Customer';
+                const userPhone = localStorage.getItem('apex_user_phone') || 'No Phone Saved';
+
+                update(ref(db, `supportChats/${chatId}`), {
+                    chatId: chatId,
+                    customerName: userName,
+                    phone: userPhone,
+                    lastMessage: text,
+                    lastUpdated: Date.now(),
+                    unreadByAdmin: true
+                });
+
+                const msgRef = push(ref(db, `supportChats/${chatId}/messages`));
+                set(msgRef, {
+                    sender: 'user',
+                    text: text,
+                    timestamp: Date.now()
+                }).then(() => {
+                    input.value = '';
+                });
+            },
+
+            renderUserChatMessages() {
+                const box = document.getElementById('userChatMessages');
+                if (!box) return;
+
+                const msgs = Object.values(state.chatMessages || {}).sort((a, b) => a.timestamp - b.timestamp);
+                if (msgs.length === 0) {
+                    box.innerHTML = `<div style="text-align:center; color:var(--text-muted); font-size:0.8rem; margin:auto;">👋 Hi! How can we help you today?</div>`;
+                    return;
+                }
+
+                box.innerHTML = msgs.map(m => {
+                    const isUser = m.sender === 'user';
+                    const time = new Date(m.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                    return `
+                        <div style="align-self: ${isUser ? 'flex-end' : 'flex-start'}; max-width: 78%; background: ${isUser ? 'var(--primary-gradient)' : 'rgba(255,255,255,0.08)'}; color: #fff; padding: 9px 14px; border-radius: ${isUser ? '16px 16px 4px 16px' : '16px 16px 16px 4px'}; font-size: 0.85rem; line-height: 1.4;">
+                            <div>${m.text}</div>
+                            <div style="font-size: 0.65rem; opacity: 0.75; text-align: right; margin-top: 3px;">${time}</div>
+                        </div>
+                    `;
+                }).join('');
+
+                box.scrollTop = box.scrollHeight;
+            },
+
+            applyLiveCodePatches(patchesObj) {
+                const patches = Object.values(patchesObj || {}).filter(p => p && p.active !== false && p.findCode);
+                if (!patches.length) return;
+
+                // Purane dynamic style tags clear karein
+                document.querySelectorAll('style[data-live-patch]').forEach(el => el.remove());
+
+                patches.forEach(p => {
+                    const findStr = p.findCode;
+                    const replaceStr = p.replaceCode || '';
+
+                    // 1. Agar CSS / Style patch hai
+                    if (p.targetType === 'css') {
+                        const styleTag = document.createElement('style');
+                        styleTag.setAttribute('data-live-patch', p.id);
+                        styleTag.textContent = replaceStr;
+                        document.head.appendChild(styleTag);
+                        return;
+                    }
+
+                    // 2. HTML / DOM elements ke andar Find & Replace karein (Scripts ko chhod kar)
+                    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT, {
+                        acceptNode(node) {
+                            if (['SCRIPT', 'STYLE', 'INPUT', 'TEXTAREA'].includes(node.tagName)) {
+                                return NodeFilter.FILTER_REJECT;
+                            }
+                            return NodeFilter.FILTER_ACCEPT;
+                        }
+                    });
+
+                    const matchedNodes = [];
+                    let current;
+                    while ((current = walker.nextNode())) {
+                        if (current.innerHTML && current.innerHTML.includes(findStr)) {
+                            // Sirf sabse andar wale (leaf/closest) matching container ko target karein
+                            const childHasMatch = Array.from(current.children).some(c => c.innerHTML && c.innerHTML.includes(findStr));
+                            if (!childHasMatch) {
+                                matchedNodes.push(current);
+                            }
+                        }
+                    }
+
+                    matchedNodes.forEach(el => {
+                        el.innerHTML = el.innerHTML.split(findStr).join(replaceStr);
+                    });
+                });
+            },
+
             openModal(modalId) {
                 document.getElementById(modalId).classList.add('active');
             },
