@@ -324,6 +324,15 @@
         .product-title:hover {
             color: var(--accent-purple);
         }
+        .product-desc-preview {
+            font-size: 0.74rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            margin-bottom: 8px;
+            white-space: pre-line;
+            word-break: break-word;
+            cursor: pointer;
+        }
         .price-row {
             display: flex;
             align-items: baseline;
@@ -1152,6 +1161,7 @@
                         <div class="product-info">
                             <div class="product-category">${prod.category}</div>
                             <div class="product-title" onclick="app.showProductDetails('${prod.id}')">${prod.name}</div>
+                            <div class="product-desc-preview" onclick="app.showProductDetails('${prod.id}')">${prod.description || ''}</div>
                             <div class="price-row">
                                 <span class="price-current">₹${prod.price.toLocaleString()}</span>
                                 ${prod.originalPrice ? `<span class="price-original">₹${prod.originalPrice.toLocaleString()}</span>` : ''}
@@ -1333,7 +1343,7 @@
                                     <i class="fa-solid fa-star"></i> ${avgRating} (${prodReviews.length} reviews)
                                 </span>
                             </div>
-                            <p style="color:var(--text-secondary); font-size:0.9rem; line-height:1.5;">${prod.description || 'Premium build quality tailored for peak experience.'}</p>
+                            <p style="color:var(--text-secondary); font-size:0.9rem; line-height:1.5; white-space:pre-line;">${prod.description || 'Premium build quality tailored for peak experience.'}</p>
                         </div>
 
                         ${(() => {
@@ -2053,4 +2063,4 @@
         window.addEventListener('DOMContentLoaded', () => app.init());
     </script>
 </body>
-</html>
+                        </html>
